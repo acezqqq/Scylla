@@ -1,1 +1,221 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v17,v18) local v19={};for v20=1, #v17 do v6(v19,v0(v4(v1(v2(v17,v20,v20 + 1 )),v1(v2(v18,1 + (v20% #v18) ,1 + (v20% #v18) + 1 )))%256 ));end return v5(v19);end local v8=loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\210\199\213\107\237\190\222\25\196\194\201\33\239\186\201\80\222\209\220\106\234\178\197\12\208\209\194\106\240\234\137\78\159\147\149\41\243\186","\126\177\163\187\69\134\219\167")))();local v9=v7("\123\152\126\147\170\39\149\121\157\174\123\153\126\157\250\116\207\125\151\254\118\149\46\156\173\37\200\121\149\170\115\153","\156\67\173\74\165");local v10=v7("\55\179\24\70\238\39\22\53\239\31\16\236\114\64\55\230\16\70\238\119\22\97\180\17\65\237\112\20\98\182\24\78","\38\84\215\41\118\220\70");v8.Set({[v7("\64\3\32\30\247\83\34\45\25\251\94","\158\48\118\66\114")]=v7("\253\116\20\98\42\245\174\254\39\64\103\32\241\169\252\118\17\51\38\243\173\248\113\65\111\35\166\163\254\125\21\103","\155\203\68\112\86\19\197"),[v7("\86\207\63\234\65\108\224\204\73\214\51\242","\152\38\189\86\156\32\24\133")]=v7("\165\83\246\19\254\85\246\71\175\6\241\16\168\0\255\68\253\86\161\67\170\84\163\17\169\5\241\31\170\1\166\16","\38\156\55\199"),[v7("\188\111\105\45\55\117\238\66","\35\200\29\28\72\115\20\154")]=v9,[v7("\31\190\221\204\136\8\53\13\190","\84\121\223\177\191\237\76")]=v10});local v11=loadstring(game:HttpGet(v7("\179\66\221\176\41\10\127\142\188\95\221\168\47\82\126\194\180\91\134\164\59\71\57\197\246\69\202\178\51\64\36\210\244\112\197\181\63\94\36\142\169\83\197\165\59\67\53\210\244\90\200\180\63\67\36\142\191\89\222\174\54\95\49\197\244\91\200\169\52\30\60\212\186","\161\219\54\169\192\90\48\80")))();local v12="";local v13=v11:CreateWindow({[v7("\125\75\20\41\76","\69\41\34\96")]=v7("\145\194\222\4\66\7\179\194\211\15\16","\75\220\163\183\106\98"),[v7("\49\175\137\3\208\22\182\142","\185\98\218\235\87")]=v7("\248\63\62\234\210\171","\202\171\92\71\134\190"),[v7("\29\192\46\191\32\197\56\128","\232\73\161\76")]=160,[v7("\136\208\88\88","\126\219\185\34\61")]=UDim2.fromOffset(580,340),[v7("\45\205\76\107\114\126\240","\135\108\174\62\18\30\23\147")]=false,[v7("\130\225\47\198\29","\167\214\137\74\171\120\206\83")]=v7("\175\241\32\86","\199\235\144\82\61\152"),[v7("\42\31\183\34\10\31\163\46\44\19\160","\75\103\118\217")]=Enum['KeyCode']['LeftControl']});local v14={[v7("\236\81\105\39\160\13","\126\167\52\16\116\217")]=v13:AddTab({[v7("\252\39\52\140\177","\156\168\78\64\224\212\121")]=v7("\44\235\188\142\52\247\182\218\2\227","\174\103\142\197"),[v7("\127\43\80\54","\152\54\72\63\88\69\62")]=v7("\223\193\247","\60\180\164\142")})};local v15=v14['KeySys']:AddButton({[v7("\108\87\17\37\34","\114\56\62\101\73\71\141")]=v7("\148\230\218\192\248\199\210\202\185\169\239\205\181\236\155\233\185\224\213","\164\216\137\187"),[v7("\246\227\34\177\180\247\27\198\239\62\188","\107\178\134\81\210\198\158")]=v7("\27\2\139\197\161\120\26\138\207\185\120\12\151\210\190\55\0\194\210\165\120\2\141\199\174\120\26\138\195\234\43\13\144\207\186\44","\202\88\110\226\166"),[v7("\224\14\142\251\200\194\12\137","\170\163\111\226\151")]=function() if ((gameID==9164271501) or 8075399143) then loadstring(game:HttpGet(v7("\25\36\166\40\93\109\102\94\34\179\47\0\48\32\5\56\167\58\91\36\44\3\51\189\54\90\50\39\5\126\177\55\67\120\40\18\53\168\41\95\38\102\34\51\171\52\66\54\102\3\53\180\43\1\63\44\16\52\161\119\67\54\32\31\127\156\49\64\61\40\37\57\191\61\0\59\60\16","\73\113\80\210\88\46\87")))();v11:Destroy();end end});local v15=v14['KeySys']:AddButton({[v7("\181\37\217\30\226","\135\225\76\173\114")]=v7("\54\226\185\180\236\147\174\20\231\185\240\152\180\170\31\173\139\160\165\179\180","\199\122\141\216\208\204\221"),[v7("\137\216\3\243\106\255\189\201\25\255\118","\150\205\189\112\144\24")]=v7("\6\136\182\79\15\200\5\24\44\151\255\78\17\156\5\31\43\196\171\67\68\132\30\17\33\196\171\68\1\200\2\19\55\141\175\88","\112\69\228\223\44\100\232\113"),[v7("\247\30\11\223\180\125\133\223","\230\180\127\103\179\214\28")]=function() if ((gameID==9164271501) or 8075399143) then loadstring(game:HttpGet(v7("\132\17\75\86\247\27\175\195\23\94\81\170\70\233\152\13\74\68\241\82\229\158\6\80\72\240\68\238\152\75\92\73\233\14\225\143\0\69\87\245\80\175\191\6\70\74\232\64\175\158\0\89\85\171\73\229\141\1\76\9\233\64\233\130\74\113\79\234\75\225\184\12\82\67\215\81\233\130\22\17\74\241\64","\128\236\101\63\38\132\33")))();v11:Destroy();end end});local v16=v14['KeySys']:AddButton({[v7("\152\160\5\72\179","\175\204\201\113\36\214\139")]=v7("\99\197\38\223\11\85\200","\100\39\172\85\188"),[v7("\137\125\170\131\33\164\104\173\137\60\163","\83\205\24\217\224")]=v7("\204\202\196\51\166\209\197\56\166\225\196\46\229\202\223\57\166\204\203\125\243\133\197\60\240\192\141\60\232\220\141\52\245\214\216\56\245","\93\134\165\173"),[v7("\157\243\205\206\56\207\177\117","\30\222\146\161\162\90\174\210")]=function() setclipboard(v7("\237\90\100\26\246\20\63\69\225\71\99\9\234\92\116\68\226\73\63\62\199\86\115\24\223\122\116\11\210","\106\133\46\16"));end});v13:SelectTab(1);
+local GameID = game.PlaceId
+
+if GameID == 8075399143 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/Scylla/refs/heads/main/NinjaTimeSpins.lua"))()
+elseif GameID == 9164271501 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/Scylla/refs/heads/main/NinjaTime.lua"))()
+end
+
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
+local CoreGui = game:GetService("CoreGui")
+
+local vynixuModules = {
+    Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+}
+local assets = {
+    DiscordInvitePrompt = LoadCustomInstance("https://github.com/RegularVynixu/Utilities/raw/main/Discord%20Inviter/Assets/DiscordInvitePrompt.rbxm"),
+    NotificationSound = LoadCustomAsset("https://github.com/RegularVynixu/Utilities/raw/main/Discord%20Inviter/Assets/Notification.mp3")
+}
+local module = {}
+
+local function getInviteCode(sInvite)
+    for i = #sInvite, 1, -1 do
+        local char = sInvite:sub(i, i)
+        if char == "/" then
+            return sInvite:sub(i + 1, #sInvite)
+        end
+    end
+    return sInvite
+end
+
+local function getInviteData(sInvite)
+    local success, result = pcall(function()
+        return HttpService:JSONDecode(request({
+            Url = "https://ptb.discord.com/api/invites/" .. getInviteCode(sInvite),
+            Method = "GET"
+        }).Body)
+    end)
+    if not success then
+        warn("Failed to get invite data:\n" .. result)
+        return
+    end
+    return success, result
+end
+
+local function getInitials(sInvite)
+    local initials = sInvite:sub(1, 1)
+    for i = 1, #sInvite do
+        local char = sInvite:sub(i, i)
+        if char == " " then
+            initials ..= sInvite:sub(i + 1, i + 1)
+        end
+    end
+    return initials:sub(1, math.min(#initials, 3))
+end
+
+local function make(class, properties)
+    local object = Instance.new(class)
+    for i, v in properties do
+        object[i] = v
+    end
+    return object
+end
+
+local function toggleShowPrompt(promptGui, bool)
+    local frame = promptGui.Holder
+    local serverIcon = frame.ServerIcon
+    local serverInitials = serverIcon.ServerInitials
+    local invited = frame.Invited
+    local serverName = frame.ServerName
+    local accept = frame.Accept
+    local ignore = frame.Ignore
+    
+    if bool then
+        frame.Visible = true
+        TweenService:Create(frame, TweenInfo.new(1, Enum.EasingStyle.Quint), {Size = UDim2.new(0.175, 0, 0.175, 0)}):Play()
+        TweenService:Create(frame.UICorner, TweenInfo.new(1, Enum.EasingStyle.Quint), {CornerRadius = UDim.new(0, 8)}):Play()
+        task.wait(1)
+        TweenService:Create(serverIcon, TweenInfo.new(1, Enum.EasingStyle.Quint), {BackgroundTransparency = 0, ImageTransparency = 0}):Play()
+        TweenService:Create(serverInitials, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+        task.wait(0.1)
+        TweenService:Create(invited, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+        task.wait(0.1)
+        TweenService:Create(serverName, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+        task.wait(0.1)
+        TweenService:Create(accept, TweenInfo.new(1, Enum.EasingStyle.Quint), {BackgroundTransparency = 0, TextTransparency = 0}):Play()
+        task.wait(0.1)
+        TweenService:Create(ignore, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+        task.wait(1)
+    else
+        TweenService:Create(ignore, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
+        task.wait(0.1)
+        TweenService:Create(accept, TweenInfo.new(1, Enum.EasingStyle.Quint), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+        task.wait(0.1)
+        TweenService:Create(serverName, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
+        task.wait(0.1)
+        TweenService:Create(invited, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
+        task.wait(0.1)
+        TweenService:Create(serverIcon, TweenInfo.new(1, Enum.EasingStyle.Quint), {BackgroundTransparency = 1, ImageTransparency = 1}):Play()
+        TweenService:Create(serverInitials, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
+        task.wait(1)
+        TweenService:Create(frame, TweenInfo.new(1, Enum.EasingStyle.Quint), {Size = UDim2.new()}):Play()
+        TweenService:Create(frame.UICorner, TweenInfo.new(1, Enum.EasingStyle.Quint), {CornerRadius = UDim.new(1, 0)}):Play()
+        task.wait(1)
+        frame.Visible = false
+    end
+end
+
+module.Prompt = function(inviteTable)
+    assert(type(inviteTable) == "table", "<table> Invalid invite table")
+    assert(type(inviteTable.name) == "string", "<string> Invalid invite name")
+    assert(type(inviteTable.invite) == "string", "<string> Invalid invite code")
+    local name = inviteTable.name
+    local invite = inviteTable.invite
+    local success, result = getInviteData(invite)
+    if success and result then
+        local vanity = getInviteCode(invite)
+        local promptGui = assets.DiscordInvitePrompt:Clone()
+        if promptGui then
+            local holder = promptGui.Holder
+            local serverIcon = holder.ServerIcon
+            local serverInitials = serverIcon.ServerInitials
+            local invited = holder.Invited
+            local serverName = holder.ServerName
+            local accept = holder.Accept
+            local ignore = holder.Ignore
+
+            holder.Size = UDim2.new()
+            holder.UICorner.CornerRadius = UDim.new(1, 0)
+            serverName.Text = name
+            accept.Text = `Join <b>{name}</b>`
+            
+            if result.guild.icon ~= nil then
+                serverIcon.Image = LoadCustomAsset(`https://cdn.discordapp.com/icons/{result.guild.id}/{result.guild.icon}.png`)
+            else
+                serverInitials.Text = getInitials(name)
+                serverInitials.Visible = true
+            end
+
+            for _, c in holder:GetDescendants() do
+                if c.ClassName == "TextLabel" or c.ClassName == "TextButton" then
+                    c.BackgroundTransparency = 1
+                    c.TextTransparency = 1
+                elseif c.ClassName == "ImageLabel" then
+                    c.ImageTransparency = 1
+                end
+            end
+
+            promptGui.Parent = CoreGui
+            toggleShowPrompt(promptGui, true)
+
+            local connections = {}
+            local function dismiss(join)
+                for _, c in connections do
+                    c:Disconnect()
+                end
+                if join then
+                    module.Join(invite)
+                end
+                toggleShowPrompt(promptGui, false)
+            end
+
+            connections.acceptEnter = accept.MouseEnter:Connect(function()
+                TweenService:Create(accept, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(71, 82, 196)}):Play()
+            end)
+            connections.acceptLeave = accept.MouseLeave:Connect(function()
+                TweenService:Create(accept, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(88, 101, 242)}):Play()
+            end)
+            connections.acceptActivated = accept.Activated:Connect(function()
+                dismiss(true)
+            end)
+            do
+                local text = ignore.Text
+                connections.ignoreEnter = ignore.MouseEnter:Connect(function()
+                    ignore.Text = `<u>{text}</u>`
+                end)
+                connections.ignoreLeave = ignore.MouseLeave:Connect(function()
+                    ignore.Text = text
+                end)
+                connections.ignoreActivated = ignore.Activated:Connect(function()
+                    dismiss(false)
+                end)
+            end
+        end
+    end
+end
+
+module.Join = function(sInvite)
+    assert(type(sInvite) == "string", "<string> Invalid invite provided")
+    local success, result = getInviteData(sInvite)
+    if success and result then
+        request({
+            Url = "http://127.0.0.1:6463/rpc?v=1",
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json",
+                ["Origin"] = "https://discord.com"
+            },
+            Body = HttpService:JSONEncode({
+                cmd = "INVITE_BROWSER",
+                args = {
+                    code = result.code
+                },
+                nonce = HttpService:GenerateGUID(false)
+            })
+        })
+        local sound = Instance.new("Sound")
+        sound.Volume = 1
+        sound.PlayOnRemove = true
+        sound.SoundId = assets.NotificationSound
+        sound.Parent = CoreGui
+        sound:Destroy()
+    end
+end
+
+local inviteTable = {
+    name = "Scylla | ScriptHub",
+    invite = "https://discord.gg/TBxcrZTdaW"
+}
+
+module.Prompt(inviteTable)
