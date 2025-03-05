@@ -1,10 +1,7 @@
-local GameID = game.PlaceId
+repeat
+	task.wait()
+until game:IsLoaded()
 
-if GameID == 8075399143 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/Scylla/refs/heads/main/NinjaTimeSpins.lua"))()
-elseif GameID == 9164271501 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/Scylla/refs/heads/main/NinjaTime.lua"))()
-end
 
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
@@ -219,3 +216,133 @@ local inviteTable = {
 }
 
 module.Prompt(inviteTable)
+
+local allowedPlaces = {
+    [8075399143] = true,
+    [9164271501] = true
+}
+
+if not allowedPlaces[game.PlaceId] then
+    game.Players.LocalPlayer:Kick("Scylla doesn't support this game | Join our discord for more information")
+end
+
+
+makefolder("Scylla")
+local key_path = "Syclla/Key.txt"
+script_key = script_key or isfile(key_path) and readfile(key_path) or nil
+
+local Cloneref = cloneref or clonereference or function(instance)
+	return instance
+end
+local Players, HttpService = Cloneref(game:GetService("Players")), Cloneref(game:GetService("HttpService"))
+local Request = http_request or request or syn.request or http
+
+local UI = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
+if game.placeId == 8075399143 then
+    API.script_id = "1ddf34ee1c34ac743947510b1f3de9b0"
+elseif game.placeId == 9164271501 then
+    API.script_id = "ef9455c5229388090b6d981daf114ff8"
+end
+
+
+
+local function notify(title, content, duration)
+	UI:Notify({ Title = title, Content = content, Duration = duration or 8 })
+end
+
+local function checkKey(input_key)
+	local status = API.check_key(input_key or script_key)
+	if status.code == "KEY_VALID" then
+		script_key = input_key or script_key
+		writefile(key_path, script_key)
+		API.load_script()
+        UI:Destroy()
+	elseif status.code:find("KEY_") then
+		local messages = {
+			KEY_HWID_LOCKED = "Key linked to a different HWID. Please reset it using our bot",
+			KEY_INCORRECT = "Key is incorrect",
+			KEY_INVALID = "Key is invalid",
+		}
+		notify("Key Check Failed", messages[status.code] or "Unknown error")
+	else
+		Players.LocalPlayer:Kick("Key check failed: " .. status.message .. " Code: " .. status.code)
+	end
+end
+
+if script_key then
+	checkKey()
+end
+
+local Window = UI:CreateWindow({
+	Title = "Scylla",
+	SubTitle = "Loader",
+	TabWidth = 160,
+	Size = UDim2.fromOffset(580, 320),
+	Acrylic = false,
+	Theme = "Dark",
+	MinimizeKey = Enum.KeyCode.End,
+})
+
+local Tabs = { Main = Window:AddTab({ Title = "Key", Icon = "" }) }
+
+local Input = Tabs.Main:AddInput("Key", {
+	Title = "Enter Key:",
+	Default = script_key or "",
+	Placeholder = "Example: agKhRikQP..",
+	Numeric = false,
+	Finished = false,
+})
+
+Tabs.Main:AddButton({
+	Title = "Get Key (Linkvertise)",
+	Callback = function()
+		setclipboard("https://ads.luarmor.net/get_key?for=Scylla_Scripthub_Linkvertise-PDevdGuoyxIP")
+		notify("Copied To Clipboard", "Ad Reward Link has been copied to your clipboard", 16)
+	end,
+})
+
+Tabs.Main:AddButton({
+	Title = "Get Key (Lootlabs)",
+	Callback = function()
+		setclipboard("https://ads.luarmor.net/get_key?for=Scylla_Scripthub_Lootlabs-ZqdQzOWDhpSs")
+		notify("Copied To Clipboard", "Ad Reward Link has been copied to your clipboard", 16)
+	end,
+})
+
+Tabs.Main:AddButton({
+	Title = "Get Key (Workink)",
+	Callback = function()
+		setclipboard("https://ads.luarmor.net/get_key?for=Scylla_Scripthub_Workink-qsCyYutvqNcX")
+		notify("Copied To Clipboard", "Ad Reward Link has been copied to your clipboard", 16)
+	end,
+})
+
+Tabs.Main:AddButton({
+	Title = "Check Key",
+	Callback = function()
+		checkKey(Input.Value)
+	end,
+})
+
+Tabs.Main:AddButton({
+	Title = "Join Discord",
+	Callback = function()
+		setclipboard("https://discord.gg/TBxcrZTdaW")
+		notify("Copied To Clipboard", "Discord Server Link has been copied to your clipboard", 16)
+		Request({
+			Url = "http://127.0.0.1:6463/rpc?v=1",
+			Method = "POST",
+			Headers = { ["Content-Type"] = "application/json", ["origin"] = "https://discord.com" },
+			Body = HttpService:JSONEncode({ args = { code = "TBxcrZTdaW" }, cmd = "INVITE_BROWSER", nonce = "." }),
+		})
+	end,
+})
+
+Window:SelectTab(1)
+notify("Scylla", "Loader Has Loaded Successfully")
+
+repeat
+	task.wait()
+until getgenv().Scylla
+UI:Destroy()
