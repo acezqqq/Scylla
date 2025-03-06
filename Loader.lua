@@ -227,8 +227,8 @@ if not allowedPlaces[game.PlaceId] then
 end
 
 
-makefolder("Scylla")
-local key_path = "Syclla/Key.txt"
+makefolder("ScyllaKey")
+local key_path = "SycllaKey/Key.txt"
 script_key = script_key or isfile(key_path) and readfile(key_path) or nil
 
 local Cloneref = cloneref or clonereference or function(instance)
@@ -240,7 +240,7 @@ local Request = http_request or request or syn.request or http
 local UI = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
 if game.placeId == 8075399143 then
-    API.script_id = "1ddf34ee1c34ac743947510b1f3de9b0"
+    API.script_id = "38bc18fab08ad4249ddfb77f69dbff8d"
 elseif game.placeId == 9164271501 then
     API.script_id = "ef9455c5229388090b6d981daf114ff8"
 end
@@ -344,5 +344,5 @@ notify("Scylla", "Loader Has Loaded Successfully")
 
 repeat
 	task.wait()
-until getgenv().Scylla
+until getgenv().ScyllaKey
 UI:Destroy()
