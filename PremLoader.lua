@@ -3,19 +3,6 @@ repeat
 until game:IsLoaded()
 
 
----====== Load Discord inviter ======---
-local discordInviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
-
----====== Join Discord server ======---
-discordInviter.Join("https://discord.com/invite/ScyllaHub")
-
---[[local allowedPlaces = {
-    [18668065416] = true
-}
-
-if not allowedPlaces[game.PlaceId] then
-    game.Players.LocalPlayer:Kick("Scylla doesn't support this game | Join our discord for more information")
-end]]
 
 
 makefolder("ScyllaKey")
