@@ -3,8 +3,6 @@ repeat
 until game:IsLoaded()
 
 
-
-
 makefolder("ScyllaKey")
 local key_path = "SycllaKey/PremiumKey.txt"
 script_key = script_key or isfile(key_path) and readfile(key_path) or nil
