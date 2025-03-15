@@ -15,7 +15,7 @@ local Request = http_request or request or syn.request or http
 
 local UI = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
-if game.placeId == 18668065416 or 92517437168342 then
+if game.placeId == 18668065416 then
     API.script_id = "14d860e5b3f0a71c45ac877e07177807"
 elseif game.placeId == 8075399143 then
 	API.script_id = "b225e49d25df5af086c6c6a530ee9d75"
