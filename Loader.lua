@@ -9,14 +9,7 @@ local discordInviter = loadstring(game:HttpGet("https://raw.githubusercontent.co
 ---====== Join Discord server ======---
 discordInviter.Join("https://discord.com/invite/ScyllaHub")
 
---[[local allowedPlaces = {
-    [8075399143] = true,
-    [9164271501] = true
-}
 
-if not allowedPlaces[game.PlaceId] then
-    game.Players.LocalPlayer:Kick("Scylla doesn't support this game | Join our discord for more information")
-end]]
 
 
 makefolder("ScyllaKey")
