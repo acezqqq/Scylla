@@ -37,7 +37,7 @@ elseif game.placeId == 18668065416 then
 elseif game.placeId == 91797414023830 then
 	API.script_id = "710ce19e67b940f222204ab442ec469f"
 elseif game.placeId == 89413197677760 then
-	API.script_id = "710ce19e67b940f222204ab442ec469f"
+	API.script_id = "9c30ffc7ec5776d9e1149c6e4ff80b12"
 else
     game.Players.LocalPlayer:Kick("Scylla doesn't support this game | Join our discord for more information")
 end
