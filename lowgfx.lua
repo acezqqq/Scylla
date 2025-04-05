@@ -29,7 +29,7 @@ if not _G.Settings then
         },
         Meshes = {
             NoMesh = false,
-            NoTexture = false,
+            NoTexture = true,
             Destroy = false
         },
         Images = {
