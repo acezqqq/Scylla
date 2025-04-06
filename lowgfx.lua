@@ -38,7 +38,7 @@ if not _G.Settings then
         },
         Explosions = {
             Smaller = true,
-            Invisible = false, -- Not recommended for PVP games
+            Invisible = true, -- Not recommended for PVP games
             Destroy = false -- Not recommended for PVP games
         },
         Particles = {
@@ -46,15 +46,15 @@ if not _G.Settings then
             Destroy = false
         },
         TextLabels = {
-            LowerQuality = false,
-            Invisible = false,
+            LowerQuality = true,
+            Invisible = true,
             Destroy = false
         },
         MeshParts = {
             LowerQuality = true,
-            Invisible = false,
-            NoTexture = false,
-            NoMesh = false,
+            Invisible = true,
+            NoTexture = true,
+            NoMesh = true,
             Destroy = false
         },
         Other = {
