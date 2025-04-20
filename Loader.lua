@@ -48,7 +48,6 @@ local function openDiscord()
     local discordInviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
     discordInviter.Join("https://discord.com/invite/ScyllaHub")
 end
-openDiscord()
 
 local function checkKey(input_key)
     local key = input_key or script_key
