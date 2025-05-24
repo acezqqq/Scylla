@@ -16,7 +16,7 @@ local Players = Cloneref(game:GetService("Players"))
 local HttpService = Cloneref(game:GetService("HttpService"))
 local Request = http_request or request or syn.request or http
 
-local UI = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/moddedfluent/refs/heads/main/main.lua"))()
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
 
 local GAME_SCRIPTS = {
