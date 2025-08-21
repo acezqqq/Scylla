@@ -2,7 +2,7 @@ repeat
 	task.wait()
 until game:IsLoaded()
 
-local FOLDER_PATH = "ScyllaKey"
+local FOLDER_PATH = "ScyllaHub"
 local KEY_PATH = FOLDER_PATH.."/PremiumKey.txt"
 
 if not isfolder(FOLDER_PATH) then 
