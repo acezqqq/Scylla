@@ -33,7 +33,7 @@ local GAME_SCRIPTS = {
     [85896571713843] = "e5d49cad4059adb70f0a012274c1c1bf",
     [126884695634066] = "4f6c35e87cff68d943ba48699e3b9b02",
     [126244816328678] = "dea730b1e1caba481d4090d3ac2514da",
-	[14067600077] = "1e2d49a1084a1a6e3bdeb4c3c0ee31ac"
+	[4871329703] = "1e2d49a1084a1a6e3bdeb4c3c0ee31ac"
 }
 
 if not GAME_SCRIPTS[game.placeId] then
