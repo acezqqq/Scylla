@@ -19,29 +19,49 @@ local Request = http_request or request or syn.request or http
 local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/moddedfluent/refs/heads/main/main.lua"))()
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
 
-local GAME_SCRIPTS = {
-    [18668065416] = "14d860e5b3f0a71c45ac877e07177807",
-    [115110570222234] = "14d860e5b3f0a71c45ac877e07177807",
-    [92517437168342] = "14d860e5b3f0a71c45ac877e07177807",
-    [90216279544722] = "14d860e5b3f0a71c45ac877e07177807",
-    [8075399143] = "b225e49d25df5af086c6c6a530ee9d75",
-    [9164271501] = "d01b587b82abfaf1491672040f7619af",
-    [91797414023830] = "36ba19ea80ed17546d9a00db75ee0e34",
-    [140050746237057] = "36ba19ea80ed17546d9a00db75ee0e34",
-    [135836302294156] = "36ba19ea80ed17546d9a00db75ee0e34",
-    [89413197677760] = "389b3437dc595a4d402c8992cc6bb53d",
-    [85896571713843] = "e5d49cad4059adb70f0a012274c1c1bf",
-    [126884695634066] = "4f6c35e87cff68d943ba48699e3b9b02",
-    [126244816328678] = "dea730b1e1caba481d4090d3ac2514da",
-	[4871329703] = "1e2d49a1084a1a6e3bdeb4c3c0ee31ac"
+local games = {
+	[TypeSoul] = "4871329703",
+	[DIG] = "7218065222",
+	[BLR] = "6325068386",
+	[GhoulRe] = "6490954291",
+	[GAG] = "7436755782"
 }
 
-if not GAME_SCRIPTS[game.placeId] then
+local GAME_SCRIPTS = {
+    TypeSoul = "1e2d49a1084a1a6e3bdeb4c3c0ee31ac",
+    DIG = "dea730b1e1caba481d4090d3ac2514da",
+    BLR = "14d860e5b3f0a71c45ac877e07177807",
+    GhoulRe = "36ba19ea80ed17546d9a00db75ee0e34",
+    GAG = "4f6c35e87cff68d943ba48699e3b9b02",
+}
+
+local OVERRIDES = {
+    [89413197677760] = "389b3437dc595a4d402c8992cc6bb53d",
+}
+
+local function nga()
+    if OVERRIDES[game.PlaceId] then
+        return OVERRIDES[game.PlaceId]
+    end
+	
+    for name, universeId in pairs(games) do
+        if game.GameId == tonumber(universeId) then
+            return GAME_SCRIPTS[name]
+        end
+    end
+
+    return nil
+end
+
+local scriptId = nga()
+
+
+if not scriptId then
     Players.LocalPlayer:Kick("Scylla doesn't support this game | Join our discord for more information")
     return
 end
 
-API.script_id = GAME_SCRIPTS[game.placeId]
+API.script_id = scriptId
 
 local function notify(title, content, duration)
 	UI:Notify({ Title = title, Content = content, Duration = duration or 8 })
