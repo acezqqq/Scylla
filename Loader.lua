@@ -19,27 +19,49 @@ local Request = http_request or request or syn.request or http
 local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/moddedfluent/refs/heads/main/main.lua"))()
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
 
-local GAME_SCRIPTS = {
-    [8075399143] = "38bc18fab08ad4249ddfb77f69dbff8d",
-    [9164271501] = "ef9455c5229388090b6d981daf114ff8",
-    [18668065416] = "ff5cdf86ffe96e84228656716cf17fb2",
-    [92517437168342] = "ff5cdf86ffe96e84228656716cf17fb2",
-    [115110570222234] = "ff5cdf86ffe96e84228656716cf17fb2",
-    [91797414023830] = "710ce19e67b940f222204ab442ec469f",
-    [140050746237057] = "710ce19e67b940f222204ab442ec469f",
-    [135836302294156] = "710ce19e67b940f222204ab442ec469f",
-    [89413197677760] = "9c30ffc7ec5776d9e1149c6e4ff80b12",
-    [85896571713843] = "c64ec3237b5e3b16feb22c1cfbd2d76f",
-    [126884695634066] = "c9cc5279f88a2f8fbdb7a3091c3a07be",
-    [126244816328678] = "052639790b8ed3e45be3b42d34068bc0"
+local games = {
+	[TypeSoul] = "4871329703",
+	[DIG] = "7218065222",
+	[BLR] = "6325068386",
+	[GhoulRe] = "6490954291",
+	[GAG] = "7436755782",
+	[NinjaTime] = "3110388936"
 }
 
-if not GAME_SCRIPTS[game.placeId] then
+local GAME_SCRIPTS = {
+    DIG = "052639790b8ed3e45be3b42d34068bc0",
+    BLR = "ff5cdf86ffe96e84228656716cf17fb2",
+    GhoulRe = "710ce19e67b940f222204ab442ec469f",
+    GAG = "c9cc5279f88a2f8fbdb7a3091c3a07be",
+	NinjaTime = "ef9455c5229388090b6d981daf114ff8"
+}
+
+local OVERRIDES = {
+    [8075399143] = "38bc18fab08ad4249ddfb77f69dbff8d",
+	[89413197677760] = "9c30ffc7ec5776d9e1149c6e4ff80b12"
+}
+
+local function n()
+    if OVERRIDES[game.PlaceId] then
+        return OVERRIDES[game.PlaceId]
+    end
+    for name, universeId in pairs(games) do
+        if game.GameId == tonumber(universeId) then
+            return GAME_SCRIPTS[name]
+        end
+    end
+    return nil
+end
+
+local scriptId = n()
+
+
+if not scriptId then
     Players.LocalPlayer:Kick("Scylla doesn't support this game | Join our discord for more information")
     return
 end
 
-API.script_id = GAME_SCRIPTS[game.placeId]
+API.script_id = scriptId
 
 local function notify(title, content, duration)
 	UI:Notify({ Title = title, Content = content, Duration = duration or 8 })
