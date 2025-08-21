@@ -20,11 +20,11 @@ local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/mo
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
 
 local games = {
-	[DIG] = 7218065222,
-	[BLR] = 6325068386,
-	[GhoulRe] = 6490954291,
-	[GAG] = 7436755782,
-	[NinjaTime] = 3110388936
+	DIG = 7218065222,
+	BLR = 6325068386,
+	GhoulRe = 6490954291,
+	GAG = 7436755782,
+	NinjaTime = 3110388936
 }
 
 local GAME_SCRIPTS = {
