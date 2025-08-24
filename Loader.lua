@@ -20,6 +20,7 @@ local UI = loadstring(game:HttpGet("https://raw.githubusercontent.com/acezqqq/mo
 local API = loadstring(game:HttpGet("https://sdkAPI-public.luarmor.net/library.lua"))()
 
 local games = {
+	TypeSoul = 4871329703,
 	DIG = 7218065222,
 	BLR = 6325068386,
 	GhoulRe = 6490954291,
@@ -28,6 +29,7 @@ local games = {
 }
 
 local GAME_SCRIPTS = {
+	TypeSoul = "111690f677f4dd398f04d54e0e8085b7",
     DIG = "052639790b8ed3e45be3b42d34068bc0",
     BLR = "ff5cdf86ffe96e84228656716cf17fb2",
     GhoulRe = "710ce19e67b940f222204ab442ec469f",
